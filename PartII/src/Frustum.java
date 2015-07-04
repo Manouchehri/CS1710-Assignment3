@@ -23,7 +23,7 @@ public class Frustum {
         System.out.println("The surface is: " + getSurface(userR1, userR2, h));
     }
     public static double getVolume(int R1, int R2, int h) {
-        return (1/3)*Math.PI*h*(Math.pow(R1, 2) + Math.pow(R2, 2) + R1*R2);
+        return (Math.PI*h*(Math.pow(R1, 2) + Math.pow(R2, 2) + R1*R2))/3;
     }
     public static double getSurface(int R1, int R2, int h) {
         return Math.PI*(R1 + R2)*Math.sqrt(Math.pow(R2 - R1, 2) + Math.pow(h, 2)) + Math.PI*Math.pow(R1, 2);
