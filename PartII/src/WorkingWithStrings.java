@@ -13,10 +13,10 @@ public class WorkingWithStrings {
 
         Scanner userInput = new Scanner(System.in);
         System.out.print("TEST");
-        printInOrder(userInput.next(), userInput.next());
+        //rintInOrder(userInput.next(), userInput.next());
 
-//        int test = numWords(userInput.nextLine());
-//        System.out.println(test);
+        String test = replace(userInput.next());
+        System.out.println(test);
 //        reverse(userInput.next());
 //        String holder = repeat(userInput.next(), userInput.nextInt());
 //        System.out.println(holder);
@@ -48,9 +48,19 @@ public class WorkingWithStrings {
         return breakers.length;
     }
     public static void printInOrder(String str1, String str2) {
-        String[] strs = {str1, str2};
-        Arrays.sort(strs);
-        for(int i = 0; i < strs.length; i++)
-            System.out.println(strs[i]);
+        String[] inputList = {str1, str2};
+        Arrays.sort(inputList);
+        for(int i = 0; i < inputList.length; i++)
+            System.out.println(inputList[i]);
+    }
+    public static String replace(String input) {
+        String holder = "";
+        for(int i = 0; i < input.length(); i++)
+            if(input.charAt(i) == 'a' || input.charAt(i) == 'e' || input.charAt(i) == 'i'
+                    || input.charAt(i) == 'o' || input.charAt(i) == 'u')
+                holder += 'z';
+            else
+                holder += input.charAt(i);
+        return holder;
     }
 }
