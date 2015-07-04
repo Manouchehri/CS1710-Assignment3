@@ -4,7 +4,7 @@
 
 Answer to "Part I: Tracing" can be found in `PartI/Trace.txt`.
 
-Answers to "Part II: Programming Exercises" can be found in `PartIII/src/*.java`.
+Answers to "Part II: Programming Exercises" can be found in `PartII/src/*.java`.
 
 ## Exporting
 
