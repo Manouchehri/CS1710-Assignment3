@@ -19,6 +19,7 @@ public class WorkingWithStrings {
 
         System.out.print("Enter the number of times to repeat: ");
         int repeaterNum = userInput.nextInt();
+        userInput.nextLine();
         System.out.println(repeat(repeater, repeaterNum) + "");
 
         // This is broken. I have no idea why.
