@@ -10,16 +10,23 @@ import java.util.Scanner;
 
 public class WorkingWithStrings {
     public static void main(String[] args) {
-
         Scanner userInput = new Scanner(System.in);
-        System.out.print("TEST");
-        //rintInOrder(userInput.next(), userInput.next());
+        System.out.print("Enter string to reverse: ");
+        reverse(userInput.next());
 
-        String test = replace(userInput.next());
-        System.out.println(test);
-//        reverse(userInput.next());
-//        String holder = repeat(userInput.next(), userInput.nextInt());
-//        System.out.println(holder);
+        System.out.print("Enter string to repeat: ");
+        String repeater = userInput.next();
+
+        System.out.print("Enter the number of times to repeat: ");
+        int repeaterNum = userInput.nextInt();
+        System.out.println(repeat(repeater, repeaterNum) + "");
+
+        // This is broken. I have no idea why.
+        System.out.print("Enter a line of words to count: ");
+        System.out.println(numWords(userInput.nextLine()) + " number of words.");
+
+        System.out.print("Enter a word to replace vowels: ");
+        System.out.println(replace(userInput.next()));
     }
     public static void reverse(String input) {
         System.out.println("Original word: " + input);
