@@ -5,16 +5,21 @@
  *         See LICENSE.txt for details.
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WorkingWithStrings {
     public static void main(String[] args) {
+
         Scanner userInput = new Scanner(System.in);
-        int test = numWords(userInput.nextLine());
-        System.out.println(test);
-        reverse(userInput.next());
-        String holder = repeat(userInput.next(), userInput.nextInt());
-        System.out.println(holder);
+        System.out.print("TEST");
+        printInOrder(userInput.next(), userInput.next());
+
+//        int test = numWords(userInput.nextLine());
+//        System.out.println(test);
+//        reverse(userInput.next());
+//        String holder = repeat(userInput.next(), userInput.nextInt());
+//        System.out.println(holder);
     }
     public static void reverse(String input) {
         System.out.println("Original word: " + input);
@@ -41,5 +46,11 @@ public class WorkingWithStrings {
         /* Doesn't handle multiple blank spaces, but the assignment didn't say if we need to deal with that or not. */
         String breakers[]=input.split(" ");
         return breakers.length;
+    }
+    public static void printInOrder(String str1, String str2) {
+        String[] strs = {str1, str2};
+        Arrays.sort(strs);
+        for(int i = 0; i < strs.length; i++)
+            System.out.println(strs[i]);
     }
 }
