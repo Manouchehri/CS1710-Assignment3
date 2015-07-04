@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class WorkingWithStrings {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-
+        int test = numWords(userInput.nextLine());
+        System.out.println(test);
         reverse(userInput.next());
         String holder = repeat(userInput.next(), userInput.nextInt());
         System.out.println(holder);
@@ -32,5 +33,13 @@ public class WorkingWithStrings {
         for(int i = 0; i < n; i++)
             result += str;
         return result;
+    }
+    public static int numWords(String input) {
+        if (input.isEmpty())
+            return 0;
+
+        /* Doesn't handle multiple blank spaces, but the assignment didn't say if we need to deal with that or not. */
+        String breakers[]=input.split(" ");
+        return breakers.length;
     }
 }
